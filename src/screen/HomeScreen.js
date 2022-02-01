@@ -48,8 +48,8 @@ export const HomeScreen = () => {
                 </ScrollView>
 
                 <View style={styles.postCardContainer}>
-                    { [...Array(10)].map((name, index) => (
-                        <PostCardComponent key={index}/>
+                    { HistoryData.map((items: iHistory, index) => (
+                        <PostCardComponent user={items} key={index}/>
                     ))}
                 </View>
             </ScrollView>

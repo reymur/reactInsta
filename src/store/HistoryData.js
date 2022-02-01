@@ -8,7 +8,7 @@ export const HistoryData = [
     {
         id: 2,
         name: 'alisa',
-        avatar: "http://newrbk.ru/pictures/normal_2021-03/339568378.jpg",
+        avatar: "https://c.wallhere.com/photos/41/e5/women_face_portrait_depth_of_field-1393595.jpg!d",
         active: true
     },
     {

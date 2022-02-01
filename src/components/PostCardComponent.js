@@ -1,15 +1,16 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TextInput, TouchableOpacity} from 'react-native';
 import {IconSvgPlus} from '../assets/icons/IconSvgPlus';
+import {HistoryData} from '../store/HistoryData';
 
-export const PostCardComponent = () => {
+export const PostCardComponent = ({user}) => {
     return(
         <View style={styles.Container}>
             <View style={styles.topContainer}>
                 <View style={styles.flexRow}>
                     <Image style={styles.avatar}
-                           source={{uri: "http://newrbk.ru/pictures/normal_2021-03/339568378.jpg"}}/>
-                    <Text style={styles.avatarName}>PostCard</Text>
+                           source={{uri: user.avatar}}/>
+                    <Text style={styles.avatarName}>{user.name}</Text>
                 </View>
 
                 <TouchableOpacity>
@@ -19,7 +20,7 @@ export const PostCardComponent = () => {
 
             <View style={styles.imageContainer}>
                 <Image style={styles.photo}
-                       source={{uri: "https://c.wallhere.com/photos/41/e5/women_face_portrait_depth_of_field-1393595.jpg!d"}}/>
+                       source={{uri: user.avatar}}/>
             </View>
 
             <View style={styles.topContainer}>
@@ -55,7 +56,7 @@ export const PostCardComponent = () => {
                 <View style={styles.topContainer}>
                     <View style={styles.flexRow}>
                         <Image style={styles.bottomAvatar}
-                               source={{uri: "http://newrbk.ru/pictures/normal_2021-03/339568378.jpg"}}/>
+                               source={{uri: user.avatar}}/>
                         <Text style={styles.comments}>
                             Add Comments...
                         </Text>
